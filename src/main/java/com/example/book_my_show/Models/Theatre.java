@@ -1,6 +1,6 @@
 package com.example.book_my_show.Models;
 
-import jakarta.persistence.*;
+import jakarta.persistence.* ;
 import lombok.*;
 
 import javax.xml.stream.Location;
@@ -12,6 +12,7 @@ import java.util.List;
 //@Getter
 //@Setter
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 

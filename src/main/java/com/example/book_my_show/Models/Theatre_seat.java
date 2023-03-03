@@ -1,7 +1,7 @@
 package com.example.book_my_show.Models;
 
 import com.example.book_my_show.Enums.SeatType;
-import jakarta.persistence.*;
+import jakarta.persistence.* ;
 import lombok.*;
 
 @Entity
@@ -9,6 +9,7 @@ import lombok.*;
 //@Getter  //+
 //@Setter  //---> @Data
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 
@@ -19,8 +20,11 @@ public class Theatre_seat {
     private String seatNo ;
     private SeatType seatType ;
 
+
     //theatre_seat is child wrt theatre
     @ManyToOne
     @JoinColumn
     private Theatre theatre ;
+
+
 }

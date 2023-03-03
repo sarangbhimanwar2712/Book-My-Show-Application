@@ -2,9 +2,10 @@ package com.example.book_my_show.Models;
 
 import com.example.book_my_show.Enums.Genre;
 import com.example.book_my_show.Enums.Language;
+
 import jakarta.persistence.*;
 import lombok.*;
-
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -12,6 +13,7 @@ import java.util.List;
 //@Getter //+
 //@Setter //--> @Data
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class Movie {
@@ -19,6 +21,7 @@ public class Movie {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id ;
     @Column(unique = true,nullable = false)
+//    @NotFound(action = NotFoundAction.IGNORE)
     private String movieName ;
     private double rating ;
     private int duration ;
@@ -30,5 +33,5 @@ public class Movie {
 
     //Movie is parent wrt show
     @OneToMany(mappedBy = "movie",cascade = CascadeType.ALL)
-    private List<Show> showList ;
+    private List<Show> showList = new ArrayList<>() ;
 }

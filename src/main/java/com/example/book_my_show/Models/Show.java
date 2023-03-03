@@ -1,17 +1,11 @@
 package com.example.book_my_show.Models;
 
 import com.example.book_my_show.Enums.ShowType;
-import jakarta.persistence.*;
-import jdk.jfr.Timestamp;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import jakarta.persistence.* ;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-
-import java.sql.Time;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -19,9 +13,10 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
-@Table(name = "show")
+@Table(name = "shows")
 @Getter
 @Setter
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class Show {

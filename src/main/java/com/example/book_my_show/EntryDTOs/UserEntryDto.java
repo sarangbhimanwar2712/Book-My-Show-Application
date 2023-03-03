@@ -1,6 +1,5 @@
-package com.example.book_my_show.DTOs;
+package com.example.book_my_show.EntryDTOs;
 
-import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,8 +14,9 @@ import lombok.Setter;
 //Id is not here because we don't want to send it from Postman
 public class UserEntryDto {
     private String name ;
+
     private String email ;
     private int age ;
-    private int mobNo ;
+    private String mobNo ;
     private String address ;
 }

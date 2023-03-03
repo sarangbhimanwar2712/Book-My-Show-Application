@@ -1,7 +1,7 @@
 package com.example.book_my_show.Models;
 
 
-import jakarta.persistence.*;
+import jakarta.persistence.* ;
 import lombok.*;
 
 import java.util.List;
@@ -23,12 +23,12 @@ public class User {
     private String email ;
     private int age ;
     @Column(unique = true,nullable = false)
-    private int mobNo ;
+    private String mobNo ;
     private String address ;
 
     //User is parent for Ticket entity
     @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
-    private List<Ticket> bookedTickets ;
+    private List<Ticket> ListOfbookedTickets ;
 
 
 }

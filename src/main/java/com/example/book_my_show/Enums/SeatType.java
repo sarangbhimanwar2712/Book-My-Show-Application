@@ -1,8 +1,7 @@
 package com.example.book_my_show.Enums;
 
 public enum SeatType {
-    RECLINER,
-    BALCONY ,
-    EXECUTIVE,
-    NORMAL
+   CLASSIC,
+    PREMIUM,
+
 }

@@ -1,10 +1,9 @@
 package com.example.book_my_show.Models;
 
 import com.example.book_my_show.Enums.SeatType;
-import jakarta.persistence.*;
+import jakarta.persistence.* ;
 import lombok.*;
 
-import java.sql.Time;
 import java.util.Date;
 
 @Entity
@@ -31,4 +30,6 @@ public class Show_seat {
     @ManyToOne
     @JoinColumn
     private Show show ;
+
+
 }

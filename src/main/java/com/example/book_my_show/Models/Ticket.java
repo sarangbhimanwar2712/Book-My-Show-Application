@@ -1,18 +1,22 @@
 package com.example.book_my_show.Models;
 
-import jakarta.persistence.*;
+import jakarta.persistence.* ;
 import lombok.*;
 
 
 import java.sql.Time;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 
 @Entity
 @Table(name = "ticket")
 @Getter
 @Setter
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class Ticket {
@@ -20,13 +24,16 @@ public class Ticket {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id ;
 
-    private int price ;
+    private int totalAmount ;
     private String movieName ;
-    private Time showTime ;
+    private LocalTime showTime ;
 
-    private Date showDate ;
+    private LocalDate showDate ;
     private String theatreName ;
-    private List<Show> bookedSeats;
+    private String ticketID = UUID.randomUUID().toString();
+
+    private String bookedSeats ;
+
 
     //ticket is child wrt to user
     @ManyToOne
