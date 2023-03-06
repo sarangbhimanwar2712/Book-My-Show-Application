@@ -13,8 +13,5 @@ Overall, the BookMyShow backend application is a reliable and efficient system t
 
 
 
-
-
-
-
-
+Database Scheema
+![image](https://user-images.githubusercontent.com/117634221/223074113-f3ad4451-c9ab-484a-a7b5-a163216941a2.png)
